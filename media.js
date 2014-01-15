@@ -7,11 +7,31 @@ VMX.callback=function(detections){
 vmxApi('pauseHand').onEnter(
   toggle_pause,
   null, 
-  {minTime:5000}
+  {minTime:3000}
+);
+
+vmxApi('goForward').onEnter(
+  jump_forward,
+  null, 
+  {minTime:3000}
+);
+
+vmxApi('goBackward').onEnter(
+  jump_backward,
+  null, 
+  {minTime:3000}
 );
 
 function toggle_pause(){
   _run_bash("./toggle_pause", [], "", success, error);
+}
+
+function jump_forward(){
+  _run_bash("./go_forward", [], "", success, error);
+}
+
+function jump_backward(){
+  _run_bash("./go_backward", [], "", success, error);
 }
 
 
