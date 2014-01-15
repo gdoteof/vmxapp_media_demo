@@ -4,12 +4,11 @@ VMX.callback=function(detections){
 }
 
 
-vmxApi('myPauseHand').onEnter(
+vmxApi('pauseHand').onEnter(
   toggle_pause,
   null, 
   {minTime:5000}
 );
-
 
 function toggle_pause(){
   _run_bash("./toggle_pause", [], "", success, error);
