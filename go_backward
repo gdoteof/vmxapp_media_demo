@@ -1,0 +1,1 @@
+echo "seek -30 0" > lepipe 
